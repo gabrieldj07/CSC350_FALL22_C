@@ -1,0 +1,55 @@
+create database mydb;
+
+
+CREATE TABLE timeslots (
+     Uid INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+     DateC date,
+     Days varchar(20),
+	 startTime time,
+     endTime time,
+	 id int
+);
+
+
+
+CREATE TABLE Confirmation (
+     Uid INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+     username varchar(200),
+     Unitno varchar(200),
+     Name varchar(200),
+     DateC date,
+     Days varchar(20),
+	 startTime time,
+     endTime time
+);
+
+
+CREATE TABLE users(
+     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+     user_name varchar(225),
+     password varchar(225),
+	 name varchar(225),
+     UnitNo varchar(225)
+);
+
+
+CREATE TABLE daysname (
+     Uid INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+     DateC date,
+     Days varchar(20),
+     id int
+);
+
+CREATE TABLE Dates (
+     Uid INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+     DateC date,
+	 id int
+);
+
+SELECT Uid,DateC,Days, TIME_FORMAT(startTime, "%h:%i %p") AS startTime, TIME_FORMAT(endTime, "%h:%i %p") AS endTime from timeslots where endtime> current_time();
+
+insert into users(user_name, password, name, UnitNo) values("john", "abc", "james", "3A");
+
+truncate timeslots;
+
+select * from timeslots;
