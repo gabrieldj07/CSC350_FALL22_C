@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="GroupCGantChart" company="" webLink="http://" view-date="2022-10-16" view-index="0" gantt-divider-location="300" resource-divider-location="300" version="3.1.3102" locale="en_US">
+    <description/>
+    <view zooming-state="default:5" id="gantt-chart">
+        <field id="tpd3" name="Name" width="167" order="0"/>
+        <field id="tpd4" name="Begin date" width="65" order="1"/>
+        <field id="tpd5" name="End date" width="64" order="2"/>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="210" order="0"/>
+        <field id="1" name="Default role" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="true"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" name="gantt chart" color="#8cb6ce" meeting="false" start="2022-10-18" duration="4" complete="0" thirdDate="2022-10-21" thirdDate-constraint="0" expand="true">
+            <depend id="3" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="3" name="entity relationship diagram" color="#8cb6ce" meeting="false" start="2022-10-22" duration="10" complete="0" thirdDate="2022-10-21" thirdDate-constraint="1" expand="true">
+            <depend id="22" type="2" difference="0" hardness="Strong"/>
+            <depend id="36" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="22" name="data flow diagram" color="#8cb6ce" meeting="false" start="2022-11-01" duration="10" complete="0" thirdDate="2022-10-31" thirdDate-constraint="0" expand="true">
+            <depend id="36" type="2" difference="0" hardness="Strong"/>
+            <depend id="45" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="36" name="user interface" color="#8cb6ce" meeting="false" start="2022-11-11" duration="12" complete="0" thirdDate="2022-11-11" thirdDate-constraint="0" expand="true">
+            <depend id="51" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="45" name="database dictionary" color="#8cb6ce" meeting="false" start="2022-11-11" duration="5" complete="0" thirdDate="2022-11-11" thirdDate-constraint="0" expand="true">
+            <depend id="51" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="51" name="database schema" color="#8cb6ce" meeting="false" start="2022-11-23" duration="8" complete="0" thirdDate="2022-10-16" thirdDate-constraint="0" expand="true">
+            <depend id="56" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="56" name="test data" color="#8cb6ce" meeting="false" start="2022-12-01" duration="11" complete="0" thirdDate="2022-12-01" thirdDate-constraint="0" expand="true">
+            <depend id="58" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="58" name="source code w/ comments, database schema" color="#8cb6ce" meeting="false" start="2022-12-12" duration="2" complete="0" thirdDate="2022-12-12" thirdDate-constraint="0" expand="true"/>
+    </tasks>
+    <resources>
+        <resource id="0" name="Noor" function="Default:0" contacts="" phone=""/>
+        <resource id="1" name="Jeremy" function="Default:0" contacts="" phone=""/>
+        <resource id="2" name="Gabriel" function="Default:0" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="0" resource-id="0" function="Default:0" responsible="false" load="33.3"/>
+        <allocation task-id="3" resource-id="0" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="22" resource-id="0" function="Default:0" responsible="true" load="33.3"/>
+        <allocation task-id="45" resource-id="0" function="Default:0" responsible="true" load="40.0"/>
+        <allocation task-id="51" resource-id="0" function="Default:0" responsible="true" load="33.3"/>
+        <allocation task-id="56" resource-id="0" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="0" resource-id="1" function="Default:0" responsible="true" load="33.3"/>
+        <allocation task-id="3" resource-id="1" function="Default:0" responsible="false" load="50.0"/>
+        <allocation task-id="22" resource-id="1" function="Default:0" responsible="false" load="33.3"/>
+        <allocation task-id="36" resource-id="1" function="Default:0" responsible="false" load="40.0"/>
+        <allocation task-id="45" resource-id="1" function="Default:0" responsible="false" load="60.0"/>
+        <allocation task-id="51" resource-id="1" function="Default:0" responsible="false" load="33.3"/>
+        <allocation task-id="58" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="0" resource-id="2" function="Default:0" responsible="false" load="33.4"/>
+        <allocation task-id="22" resource-id="2" function="Default:0" responsible="false" load="33.4"/>
+        <allocation task-id="36" resource-id="2" function="Default:0" responsible="false" load="60.0"/>
+        <allocation task-id="51" resource-id="2" function="Default:0" responsible="false" load="33.4"/>
+        <allocation task-id="56" resource-id="2" function="Default:0" responsible="false" load="50.0"/>
+    </allocations>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
